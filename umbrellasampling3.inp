@@ -56,9 +56,9 @@ variable zdes equal ${a}-28
 variable zave equal xcm(co2,z)
 fix mytth co2 spring tether ${k}  NULL NULL ${zdes} 0 
 fix com system momentum 1 linear 0 0 1 rescale
-run 10000
+run 100000
 fix myat1 all ave/time 10 10 100 v_zave file position.${zdes}.dat
-run 10000
+run 300000
 unfix myat1
 next a
 jump SELF loop
